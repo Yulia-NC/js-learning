@@ -30,6 +30,12 @@ const surfacearea = (radius) =>{
     return 4 * 3.14 * radius * radius; //определение функции
 }
 const surfaceMars = surfacearea(3390); //вызов функции
+const surfacearea = (radius) => {
+    return 4 * 3.14 * square(radius);
+}
+const square = (n) => {
+    return n * n;
+}
 
 const percentage = (number, total) => {
     return number * 100 / total;
@@ -52,7 +58,7 @@ console.log(persentage(30, 31));
 //const identity = value => value; (если у функции 1 аргумент)
 
 const squareOfSum = (a, b) => {
-    return Math.pow(a, 2) + (2 * a * b) + Math.pow(b, 2);
+    return Math.pow(a, 2) + 2 * a * b + Math.pow(b, 2);
   }
   console.log(squareOfSum(2, 3));
   console.log(squareOfSum(1, 10));
@@ -84,3 +90,23 @@ if (num >=0) {
 const getAbs = num => (num >=0) ? num : -num;
 
 const type = (num > 0) ? 'positive' : (num < 0) ? 'negative' : 'zero';
+
+const finalGrade = (exam, projects) => {
+    if (exam > 90 || peojects > 10) {
+      return 100;
+    } else if (exam > 75 && projects >= 5) {
+      return 90;
+    } else if (exam > 50 && projects >= 2) {
+      return 75;
+    } else {
+      return 0
+    }
+  }
+
+  const cube = (num) => {
+      return num * num * num;
+  }
+
+  cost fahrToCelsius = (fahr) => {
+      return (fahr - 32) * 5/9;
+  }
